@@ -1,9 +1,17 @@
-public class ReadFile implements Comparable<int>{
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ReadFile implements Comparable<Integer>{
 
     private static List<Weapon> weapons = new ArrayList<>();
 
     public static void main(String[] args){
         readFile();
+        printWeapons();
     }
 
     public static void readFile()
@@ -15,14 +23,29 @@ public class ReadFile implements Comparable<int>{
             while(s.hasNextLine())
             {
                 parts = s.nextLine().split(";");
-                Weapon w = new Weapon(parts[0],new WeaponType(parts[1]),new DamageType(parts[2]),Integer.parseInt(parts[3]),Integer.parseInt(parts[4]),Integer.parseInt(parts[5]),Integer.parseInt(parts[6]));
+                if (parts[1].equals("NONE"))
+                {
+                    continue;
+                }
+                WeaponType wt = WeaponType.valueOf(parts[1]);
+                DamageType dt = DamageType.valueOf(parts[2]);
+                Weapon w = new Weapon(parts[0],wt,dt,Integer.parseInt(parts[3]),Integer.parseInt(parts[4]),Integer.parseInt(parts[5]),Integer.parseInt(parts[6]));
                 weapons.add(w);
             }
         }
-        catch(FileNotFoundException f)
-        {
-            System.out.println("File not Found!");
+        catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
 
+    }
+
+    public static void printWeapons()
+    {
+        weapons.forEach(System.out::println);
+    }
+
+    @Override
+    public int compareTo(Integer o) {
+        return 0;
     }
 }
