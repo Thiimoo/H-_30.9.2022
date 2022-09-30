@@ -1,11 +1,9 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-public class ReadFile implements Comparable<Integer>{
+public class ReadFile {
 
     private static List<Weapon> weapons = new ArrayList<>();
 
@@ -42,10 +40,43 @@ public class ReadFile implements Comparable<Integer>{
     public static void printWeapons()
     {
         weapons.forEach(System.out::println);
+
+        System.out.println("Damage:");
+        sortByDamage();
+        weapons.forEach(System.out::println);
+
+        System.out.println("Name:");
+        sortByName();
+        weapons.forEach(System.out::println);
+
+        System.out.println("Value:");
+        sortByValue();
+        weapons.forEach(System.out::println);
+
+        System.out.println("Strength:");
+        sortByStrength();
+        weapons.forEach(System.out::println);
     }
 
-    @Override
-    public int compareTo(Integer o) {
-        return 0;
+    public static void sortByDamage()
+    {
+        Collections.sort(weapons,Comparator.comparing(p -> p.getDamage()));
     }
+
+    public static void sortByName()
+    {
+        Collections.sort(weapons,Comparator.comparing(p -> p.getName()));
+    }
+
+    public static void sortByValue()
+    {
+        Collections.sort(weapons,Comparator.comparing(p -> p.getValue()));
+    }
+
+    public static void sortByStrength()
+    {
+        Collections.sort(weapons,Comparator.comparing(p -> p.getStrength()));
+    }
+
+
 }

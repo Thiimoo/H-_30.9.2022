@@ -1,4 +1,4 @@
-public class Weapon {
+public class Weapon implements Comparable<Weapon>{
 
     private WeaponType type;
     private String name;
@@ -79,5 +79,10 @@ public class Weapon {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    @Override
+    public int compareTo(Weapon o) {
+        return Integer.compare(o.getDamage(),this.getDamage());
     }
 }
