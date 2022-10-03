@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="199c4995-7961-48ea-9968-99daa64b4748" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Hue_30.09.2022/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Hue_30.09.2022/src/ReadFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Streams.java" beforeDir="false" afterPath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Streams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +45,11 @@
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.StreamsTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.htlgrieskirchen.pos3.streams.Main" />
       <module name="6 H Streams" />
@@ -82,8 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.StreamsTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -95,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664806837833</updated>
-      <workItem from="1664806838978" duration="6375000" />
+      <workItem from="1664806838978" duration="8677000" />
     </task>
     <servers />
   </component>
