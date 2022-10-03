@@ -12,5 +12,7 @@ public class Main {
             values[i] = randoms[i];
         }
         System.out.println(s.average(values));
+
+
     }
 }

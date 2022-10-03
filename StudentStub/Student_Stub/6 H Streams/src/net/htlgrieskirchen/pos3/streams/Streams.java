@@ -45,7 +45,8 @@ public class Streams {
     }
 
     public List<String> upperCase(String[] strings) {
-        
+        Stream<String> stream = Arrays.stream(strings);
+        return stream.map(String::toUpperCase).toList();
     }
 
     public Weapon findWeaponWithLowestDamage(List<Weapon> weapons) {
