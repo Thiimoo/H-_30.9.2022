@@ -30,14 +30,14 @@ public class ReadFile implements Printable{
             Stream<String> lines = linesList.stream();
             for (int i = 1; i < linesList.size(); i++) {
                 parts = linesList.get(i).split(";");
-                if (parts[1].equals("NONE"))
+                if (!parts[1].equals("NONE"))
                 {
-                    continue;
+                    WeaponType wt = WeaponType.valueOf(parts[1]);
+                    DamageType dt = DamageType.valueOf(parts[2]);
+                    Weapon w = new Weapon(parts[0],wt,dt,Integer.parseInt(parts[3]),Integer.parseInt(parts[4]),Integer.parseInt(parts[5]),Integer.parseInt(parts[6]));
+                    weapons.add(w);
                 }
-                WeaponType wt = WeaponType.valueOf(parts[1]);
-                DamageType dt = DamageType.valueOf(parts[2]);
-                Weapon w = new Weapon(parts[0],wt,dt,Integer.parseInt(parts[3]),Integer.parseInt(parts[4]),Integer.parseInt(parts[5]),Integer.parseInt(parts[6]));
-                weapons.add(w);
+
             }
 
         } catch (IOException e) {

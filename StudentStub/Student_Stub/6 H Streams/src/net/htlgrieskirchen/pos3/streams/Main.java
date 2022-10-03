@@ -1,5 +1,7 @@
 package net.htlgrieskirchen.pos3.streams;
 
+import java.util.List;
+
 public class Main {
 
 
@@ -13,6 +15,8 @@ public class Main {
         }
         System.out.println(s.average(values));
 
-
+        String[] randomStrings = s.fillStringArray();
+        List<String> stringList = s.upperCase(randomStrings);
+        stringList.forEach(System.out::println);
     }
 }

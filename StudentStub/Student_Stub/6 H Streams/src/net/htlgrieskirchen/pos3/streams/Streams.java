@@ -1,6 +1,7 @@
 package net.htlgrieskirchen.pos3.streams;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Supplier;
@@ -50,15 +51,18 @@ public class Streams {
     }
 
     public Weapon findWeaponWithLowestDamage(List<Weapon> weapons) {
-        //implement this
+        Weapon weaponStream = weapons.stream().sorted((w1, w2) -> Integer.compare(w1.getMinStrength(), w2.getMinStrength())).findFirst().orElse(null);
+        return weaponStream;
     }
 
     public Weapon findWeaponWithHighestStrength(List<Weapon> weapons) {
-        //implement this
+        Weapon weaponStream = weapons.stream().sorted((w1, w2) -> Integer.compare(w2.getMinStrength(), w1.getMinStrength())).findFirst().orElse(null);
+        return weaponStream;
     }
 
     public List<Weapon> collectMissileWeapons(List<Weapon> weapons) {
-        //implement this
+        Weapon weaponStream = weapons.stream().sorted((w1, w2) -> Integer.compare(w2.getMinStrength(), w1.getMinStrength())).findFirst().orElse(null);
+        return weaponStream;
     }
 
     public Weapon findWeaponWithLongestName(List<Weapon> weapons) {
