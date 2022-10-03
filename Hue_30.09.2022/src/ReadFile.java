@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class ReadFile {
+public class ReadFile implements Printable{
 
     private List<Weapon> weapons = new ArrayList<>();
 
@@ -11,7 +11,10 @@ public class ReadFile {
         return weapons;
     }
 
-    public void readFile()
+    public ReadFile(Printable printable) {
+    }
+
+    public List<Weapon> readFile()
     {
         try{
             File f = new File("src/weapons.csv");
@@ -33,7 +36,7 @@ public class ReadFile {
         catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-
+        return weapons;
     }
 
     public void printWeapons()
@@ -96,4 +99,7 @@ public class ReadFile {
     }
 
 
+    @Override
+    public void print(List<Weapon> weapons) {
+    }
 }
