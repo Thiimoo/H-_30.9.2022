@@ -2,6 +2,7 @@ package net.htlgrieskirchen.pos3.streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -9,21 +10,21 @@ import java.util.stream.Stream;
 public class Streams {
 
     Integer[] randoms = new Integer[10000];
-    public void fillArray()
+    public Integer[] fillArray()
     {
         Supplier<Integer> supplier = new Supplier<Integer>() {
             @Override
             public Integer get() {
-                return (int) (Math.random() *10000);
+                return (int) (Math.random() *100);
             }
         };
         randoms = Stream.generate(supplier).limit(10000).toArray(Integer[]::new);
-        System.out.println("123");
+        return randoms;
     }
 
     public double average(int[] numbers) {
         IntStream stream = Arrays.stream(numbers);
-        
+        return stream.average().getAsDouble();
     }
 
     public List<String> upperCase(String[] strings) {
