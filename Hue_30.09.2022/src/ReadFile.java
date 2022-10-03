@@ -5,18 +5,13 @@ import java.util.*;
 
 public class ReadFile {
 
-    private static List<Weapon> weapons = new ArrayList<>();
+    private List<Weapon> weapons = new ArrayList<>();
 
-    public static void main(String[] args){
-        readFile();
-        //printWeapons();
-    }
-
-    public static List<Weapon> getWeapons() {
+    public List<Weapon> getWeapons() {
         return weapons;
     }
 
-    public static void readFile()
+    public void readFile()
     {
         try{
             File f = new File("src/weapons.csv");
@@ -41,7 +36,7 @@ public class ReadFile {
 
     }
 
-    public static void printWeapons()
+    public void printWeapons()
     {
         weapons.forEach(System.out::println);
 
@@ -60,26 +55,44 @@ public class ReadFile {
         System.out.println("Strength:");
         sortByStrength();
         weapons.forEach(System.out::println);
+
+        System.out.println("Damage type:");
+        sortByDamageType();
+        weapons.forEach(System.out::println);
+
+        System.out.println("Weapon type:");
+        sortByWeaponType();
+        weapons.forEach(System.out::println);
     }
 
-    public static void sortByDamage()
+    public void sortByDamage()
     {
         Collections.sort(weapons,Comparator.comparing(p -> p.getDamage()));
     }
 
-    public static void sortByName()
+    public void sortByName()
     {
         Collections.sort(weapons,Comparator.comparing(p -> p.getName()));
     }
 
-    public static void sortByValue()
+    public void sortByValue()
     {
         Collections.sort(weapons,Comparator.comparing(p -> p.getValue()));
     }
 
-    public static void sortByStrength()
+    public void sortByStrength()
     {
         Collections.sort(weapons,Comparator.comparing(p -> p.getStrength()));
+    }
+
+    public void sortByDamageType()
+    {
+        Collections.sort(weapons,Comparator.comparing(p -> p.getDamagetype()));
+    }
+
+    public void sortByWeaponType()
+    {
+        Collections.sort(weapons,Comparator.comparing(p -> p.getType()));
     }
 
 
