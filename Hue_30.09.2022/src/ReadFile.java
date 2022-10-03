@@ -1,28 +1,35 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
+import java.util.stream.Stream;
 
 public class ReadFile implements Printable{
 
     private List<Weapon> weapons = new ArrayList<>();
+
+    private Printable pt;
 
     public List<Weapon> getWeapons() {
         return weapons;
     }
 
     public ReadFile(Printable printable) {
+        pt = printable;
     }
 
     public List<Weapon> readFile()
     {
-        try{
-            File f = new File("src/weapons.csv");
-            Scanner s = new Scanner(f);
-            String[] parts = s.nextLine().split(";");
-            while(s.hasNextLine())
-            {
-                parts = s.nextLine().split(";");
+        List<String> linesList = null;
+        String[] parts;
+        try {
+            linesList = Files.readAllLines(Path.of("src/weapons.csv"));
+            Stream<String> lines = linesList.stream();
+            for (int i = 1; i < linesList.size(); i++) {
+                parts = linesList.get(i).split(";");
                 if (parts[1].equals("NONE"))
                 {
                     continue;
@@ -32,14 +39,16 @@ public class ReadFile implements Printable{
                 Weapon w = new Weapon(parts[0],wt,dt,Integer.parseInt(parts[3]),Integer.parseInt(parts[4]),Integer.parseInt(parts[5]),Integer.parseInt(parts[6]));
                 weapons.add(w);
             }
-        }
-        catch (FileNotFoundException e) {
+
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return weapons;
     }
 
-    public void printWeapons()
+
+
+    public void printWeapons(List<Weapon> weapons)
     {
         weapons.forEach(System.out::println);
 
@@ -101,5 +110,6 @@ public class ReadFile implements Printable{
 
     @Override
     public void print(List<Weapon> weapons) {
+        pt.print(weapons);
     }
 }
