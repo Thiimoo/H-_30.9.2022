@@ -9,7 +9,11 @@ public class ReadFile {
 
     public static void main(String[] args){
         readFile();
-        printWeapons();
+        //printWeapons();
+    }
+
+    public static List<Weapon> getWeapons() {
+        return weapons;
     }
 
     public static void readFile()
