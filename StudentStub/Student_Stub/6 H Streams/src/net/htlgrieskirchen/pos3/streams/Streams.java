@@ -104,8 +104,7 @@ public class Streams {
         return weaponStream;
     }
 
-    public void increaseValuesByTenPercent(List<Weapon> weapons)
-    {
+    public void increaseValuesByTenPercent(List<Weapon> weapons) {
         weapons.stream().forEach(w -> w.setValue((int) (w.getValue()*1.1)));
     }
 
