@@ -18,5 +18,13 @@ public class Main {
         String[] randomStrings = s.fillStringArray();
         List<String> stringList = s.upperCase(randomStrings);
         stringList.forEach(System.out::println);
+
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("Predicates");
+        Predicates ps = new Predicates();
+        ps.printPredicates();
     }
 }
