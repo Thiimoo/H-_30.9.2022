@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="199c4995-7961-48ea-9968-99daa64b4748" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Streams.java" beforeDir="false" afterPath="$PROJECT_DIR$/Student_Stub/6 H Streams/src/net/htlgrieskirchen/pos3/streams/Streams.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Hue.30.09.2022/H-_30.9.2022/StudentStub",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664806837833</updated>
       <workItem from="1664806838978" duration="8677000" />
+      <workItem from="1665048219395" duration="280000" />
     </task>
     <servers />
   </component>
