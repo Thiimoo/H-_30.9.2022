@@ -26,5 +26,12 @@ public class Main {
         System.out.println("Predicates");
         Predicates ps = new Predicates();
         ps.printPredicates();
+
+
+        System.out.println("\n");
+
+        System.out.println("Quadrieren");
+        Quad q = new Quad();
+        System.out.println(q.getResult());
     }
 }
